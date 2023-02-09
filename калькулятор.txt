@@ -1,0 +1,56 @@
+from tkinter import *
+from tkinter import messagebox
+
+
+def summ():
+    var1 = int(a.get())
+    var2 = int(b.get())
+    messagebox.showinfo('Результат:', str(var1 + var2))
+
+
+def sub():
+    var1 = int(a.get())
+    var2 = int(b.get())
+    messagebox.showinfo('Результат:', str(var1 - var2))
+
+
+def mul():
+    var1 = int(a.get())
+    var2 = int(b.get())
+    messagebox.showinfo('Результат:', str(var1 * var2))
+
+
+def div():
+    var1 = int(a.get())
+    var2 = int(b.get())
+    messagebox.showinfo('Результат:', str(var1 / var2))
+
+
+def div1():
+    var1 = int(a.get())
+    var2 = int(b.get())
+    messagebox.showinfo('Результат:', str(var1 // var2))
+
+
+def mod():
+    var1 = int(a.get())
+    var2 = int(b.get())
+    messagebox.showinfo('Результат:', str(var1 % var2))
+
+
+root = Tk()
+root.title('Калькулятор')
+root.geometry('500x300')
+root.resizable(True, False)
+a = Entry(root, bg='gray', fg='cyan', width=25)
+a.pack()
+b = Entry(root, bg='gray', fg='cyan', width=25)
+b.pack()
+Button(root, text='+', width=10, height=2, command=summ).pack()
+Button(root, text='-', width=10, height=2, command=sub).pack()
+Button(root, text='*', width=10, height=2, command=mul).pack()
+Button(root, text='/', width=10, height=2, command=div).pack()
+Button(root, text='//', width=10, height=2, command=div1).pack()
+Button(root, text='%', width=10, height=2, command=mod).pack()
+
+root.mainloop()
